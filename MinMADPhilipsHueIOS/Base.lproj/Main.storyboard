@@ -147,6 +147,13 @@
                                     <action selector="BrightnessSlider:" destination="P51-Ye-knS" eventType="valueChanged" id="Bq0-5n-XQq"/>
                                 </connections>
                             </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GiI-KO-jxp">
+                                <frame key="frameInset" minX="269" minY="55" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stateSwitch:" destination="P51-Ye-knS" eventType="valueChanged" id="Zgb-xj-ysT"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.95355676000948675" green="0.98638161001272229" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -155,6 +162,7 @@
                         <outlet property="HueSlider" destination="ecE-Nr-iBO" id="JGo-XM-CxW"/>
                         <outlet property="SaturationSlider" destination="LtV-3e-X3B" id="WBl-uq-nxl"/>
                         <outlet property="backButton" destination="rd0-AT-l4P" id="XEb-n3-OiR"/>
+                        <outlet property="stateSwitch" destination="GiI-KO-jxp" id="me5-XR-2Sf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOq-Va-T4z" userLabel="First Responder" sceneMemberID="firstResponder"/>

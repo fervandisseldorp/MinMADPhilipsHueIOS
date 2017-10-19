@@ -62,7 +62,8 @@ class RestApiManager: NSObject {
         
         let json: [String: Any] = ["bri": selectedLamp.brightness,
                                    "hue": selectedLamp.hue,
-                                   "sat": selectedLamp.saturation]
+                                   "sat": selectedLamp.saturation,
+                                   "on": selectedLamp.currentState]
         
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         

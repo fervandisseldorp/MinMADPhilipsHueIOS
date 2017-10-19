@@ -12,6 +12,8 @@ class DetailViewController: UIViewController {
     var selectedLamp : PhilipsHueLamp?
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var stateSwitch: UISwitch!
+    
     
     @IBOutlet weak var HueSlider: UISlider!
     @IBOutlet weak var SaturationSlider: UISlider!
@@ -36,7 +38,7 @@ class DetailViewController: UIViewController {
         HueSlider.value = Float((selectedLamp?.hue)!)
         SaturationSlider.value = Float((selectedLamp?.saturation)!)
         BrightnessSlider.value = Float((selectedLamp?.brightness)!)
-        
+        stateSwitch.isOn = (selectedLamp?.currentState)!
         
     }
 
@@ -60,6 +62,12 @@ class DetailViewController: UIViewController {
     // Brightness
     @IBAction func BrightnessSlider(_ sender: UISlider) {
         selectedLamp?.brightness = Int(sender.value)
+        updateLight()
+    }
+    
+    
+    @IBAction func stateSwitch(_ sender: UISwitch) {
+        selectedLamp?.currentState = sender.isOn
         updateLight()
     }
     

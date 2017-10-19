@@ -15,30 +15,20 @@ class PhilipsHueLamp {
     var hue = Int()
     var saturation = Int()
     var brightness = Int()
+    var currentState = Bool()
     
     init(){
         
     }
     
-    init(id: String, name: String, modelid: String, hue: Int, saturation: Int, brightness: Int){
+    init(id: String, name: String, modelid: String, hue: Int, saturation: Int, brightness: Int, currentState: Bool){
         self.id = id
         self.name = name;
         self.modelid = modelid
         self.hue = hue
         self.saturation = saturation
         self.brightness = brightness
-    }
-    
-    func setHue() {
-        
-    }
-    
-    func setSaturation(){
-        
-    }
-    
-    func setValue(){
-        
+        self.currentState = currentState
     }
     
     

@@ -40,10 +40,9 @@ class PhilipsViewController: UITableViewController {
         print(lampArray)
         
         let row = indexPath.row
-        cell.LabelLampId.text = lampArray[row].modelid + lampArray[row].name
+        cell.LabelLampId.text = lampArray[row].name + " " + lampArray[row].id
         
         return cell
-        
     }
     
     
@@ -54,15 +53,12 @@ class PhilipsViewController: UITableViewController {
                 if let indexPath = self.tableView.indexPathForSelectedRow {
                     let selectedPhilipsHueLamp = lampArray[indexPath.row]
                     destination.selectedLamp = selectedPhilipsHueLamp
-                    
                 }
             }
         }
         if(segue.identifier == "backButton"){
             print("back button pressed")
-            
         }
-
     }
     
     
@@ -81,9 +77,9 @@ class PhilipsViewController: UITableViewController {
                 // loop through found lamps
                 for lampId in lampIds {
                     
-                    
                     let lamp = json?.value(forKey: lampId) as? NSObject
                     let lampState = lamp?.value(forKey: "state") as! NSObject
+                        let currentState = lampState.value(forKey: "on") as! Bool
                         let brightness = lampState.value(forKey: "bri") as! Int
                         let hue = lampState.value(forKey: "hue") as! Int
                         let saturation = lampState.value(forKey: "sat") as! Int
@@ -92,7 +88,7 @@ class PhilipsViewController: UITableViewController {
                     
                     print("lamp with id: " + lampId + " has values:   \(brightness) + \(hue) + \(saturation)" )
                     
-                    let philipsHueLamp = PhilipsHueLamp(id: lampId, name: name, modelid: modelid, hue: hue, saturation: saturation, brightness: brightness)
+                    let philipsHueLamp = PhilipsHueLamp(id: lampId, name: name, modelid: modelid, hue: hue, saturation: saturation, brightness: brightness, currentState: currentState)
                     self.lampArray.append(philipsHueLamp)
                     self.tableView.reloadData()
                     
