@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99702F391F98B28D005DAB7F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99702F381F98B28D005DAB7F /* DetailViewController.swift */; };
+		99702F3B1F98B59B005DAB7F /* LampTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99702F3A1F98B59B005DAB7F /* LampTableViewCell.swift */; };
 		99E12CAA1F961B2F00B7BE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E12CA91F961B2F00B7BE25 /* AppDelegate.swift */; };
 		99E12CAC1F961B2F00B7BE25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E12CAB1F961B2F00B7BE25 /* ViewController.swift */; };
 		99E12CAF1F961B2F00B7BE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99E12CAD1F961B2F00B7BE25 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99702F381F98B28D005DAB7F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		99702F3A1F98B59B005DAB7F /* LampTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LampTableViewCell.swift; sourceTree = "<group>"; };
 		99E12CA61F961B2F00B7BE25 /* MinMADPhilipsHueIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinMADPhilipsHueIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E12CA91F961B2F00B7BE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99E12CAB1F961B2F00B7BE25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,12 +67,14 @@
 				99E12CA91F961B2F00B7BE25 /* AppDelegate.swift */,
 				99E12CAB1F961B2F00B7BE25 /* ViewController.swift */,
 				99E12CBB1F961B7200B7BE25 /* PhilipsViewController.swift */,
+				99702F3A1F98B59B005DAB7F /* LampTableViewCell.swift */,
 				99E12CAD1F961B2F00B7BE25 /* Main.storyboard */,
 				99E12CB01F961B2F00B7BE25 /* Assets.xcassets */,
 				99E12CB21F961B2F00B7BE25 /* LaunchScreen.storyboard */,
 				99E12CB51F961B2F00B7BE25 /* Info.plist */,
 				99E12CBD1F961EF600B7BE25 /* RestApiManager.swift */,
 				99E12CBF1F9624AB00B7BE25 /* PhilipsHueLamp.swift */,
+				99702F381F98B28D005DAB7F /* DetailViewController.swift */,
 			);
 			path = MinMADPhilipsHueIOS;
 			sourceTree = "<group>";
@@ -145,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99702F3B1F98B59B005DAB7F /* LampTableViewCell.swift in Sources */,
 				99E12CBC1F961B7200B7BE25 /* PhilipsViewController.swift in Sources */,
 				99E12CAC1F961B2F00B7BE25 /* ViewController.swift in Sources */,
 				99E12CC01F9624AB00B7BE25 /* PhilipsHueLamp.swift in Sources */,
+				99702F391F98B28D005DAB7F /* DetailViewController.swift in Sources */,
 				99E12CBE1F961EF600B7BE25 /* RestApiManager.swift in Sources */,
 				99E12CAA1F961B2F00B7BE25 /* AppDelegate.swift in Sources */,
 			);
@@ -311,6 +319,7 @@
 				99E12CBA1F961B3000B7BE25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

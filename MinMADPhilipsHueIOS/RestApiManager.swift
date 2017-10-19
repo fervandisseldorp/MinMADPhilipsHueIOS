@@ -21,18 +21,13 @@ class RestApiManager: NSObject {
     }
     
     func getPhilipsHueLamps(_ onCompletion: @escaping (NSDictionary?, NSError?) -> Void ) {
-        
         // format url van String
         let url = URL(string: baseUrl!)!
-        
         // Reuest is a struct
         var request = URLRequest(url: url)
-        
         // Get
         request.httpMethod = "GET"
-        
         // Extras
-        
         let session = URLSession.shared
         
         let task = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
@@ -42,8 +37,6 @@ class RestApiManager: NSObject {
                 print(error!.localizedDescription)
                 onCompletion(nil, error! as NSError)
             }
-            
-            // Do try .. get json results
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                 // succes
@@ -55,6 +48,48 @@ class RestApiManager: NSObject {
         })
         
         task.resume()
+    }
+    
+    
+    func postPhilipsHue(_ onCompletion: @escaping (NSDictionary?, NSError?) -> Void, selectedLamp: PhilipsHueLamp){
+        let baseUrl = "http://192.168.1.179/api/lXPypsuuj4ujhAlXdZP2URMJpVZwqUS-HAMrojC0/lights/"
+        let extendedUrl = "\(selectedLamp.id)/state/"
+        let completeUrl = URL(string: (baseUrl + extendedUrl))
+        
+        var request = URLRequest(url: completeUrl!)
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let json: [String: Any] = ["bri": selectedLamp.brightness,
+                                   "hue": selectedLamp.hue,
+                                   "sat": selectedLamp.saturation]
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        request.httpMethod = "PUT"
+        request.httpBody = jsonData;
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+            print("Task done")
+            
+            if(error != nil) {
+                print(error!.localizedDescription)
+                onCompletion(nil, error! as NSError)
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                
+                onCompletion(json, nil)
+            } catch {
+                onCompletion(nil, error as NSError)
+            }
+        })
+        
+        task.resume()
+        
     }
     
     

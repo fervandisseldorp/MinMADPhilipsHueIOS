@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PhilipsViewController: UIViewController {
+class PhilipsViewController: UITableViewController {
     @IBOutlet weak var testbutton: UIButton!
+    var lampArray = [PhilipsHueLamp]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,48 @@ class PhilipsViewController: UIViewController {
     
     
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lampArray.count
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lampCell", for: indexPath) as! LampTableViewCell
+        print(lampArray)
+        
+        let row = indexPath.row
+        cell.LabelLampId.text = lampArray[row].modelid + lampArray[row].name
+        
+        return cell
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("in the segue")
+        if(segue.identifier=="toLampDetails"){
+            if let destination = segue.destination as? DetailViewController {
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                    let selectedPhilipsHueLamp = lampArray[indexPath.row]
+                    destination.selectedLamp = selectedPhilipsHueLamp
+                    
+                }
+            }
+        }
+        if(segue.identifier == "backButton"){
+            print("back button pressed")
+            
+        }
+
+    }
+    
+    
+    
+    // Get all the available PhilipsHueLamps
+    //
     func connectToPhilipsHue(){
         let connection = RestApiManager.sharedInstance
         connection.getPhilipsHueLamps( {(json: NSDictionary?, error: NSError?) -> Void in
@@ -44,8 +87,14 @@ class PhilipsViewController: UIViewController {
                         let brightness = lampState.value(forKey: "bri") as! Int
                         let hue = lampState.value(forKey: "hue") as! Int
                         let saturation = lampState.value(forKey: "sat") as! Int
+                    let name = lamp?.value(forKey: "name") as! String
+                    let modelid = lamp?.value(forKey: "modelid") as! String
                     
-                    print("lamp with id: " + lampId + "has values:   \(brightness) + \(hue) + \(saturation)" )
+                    print("lamp with id: " + lampId + " has values:   \(brightness) + \(hue) + \(saturation)" )
+                    
+                    let philipsHueLamp = PhilipsHueLamp(id: lampId, name: name, modelid: modelid, hue: hue, saturation: saturation, brightness: brightness)
+                    self.lampArray.append(philipsHueLamp)
+                    self.tableView.reloadData()
                     
                 }
             
@@ -58,10 +107,12 @@ class PhilipsViewController: UIViewController {
                 print(error!.localizedDescription)
             }
         })
-        
     }
     
-
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
