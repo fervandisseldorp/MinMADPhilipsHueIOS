@@ -18,7 +18,6 @@ class RestApiManager: NSObject {
     
     override init() {
         baseUrl = "http://192.168.1.179/api/lXPypsuuj4ujhAlXdZP2URMJpVZwqUS-HAMrojC0/lights"
-        // apiKey = "P_btPeh4FcS-eBfr4NheLke2QvSSAKxmZ0hRQ2taTGlxYz0g"
     }
     
     func getPhilipsHueLamps(_ onCompletion: @escaping (NSDictionary?, NSError?) -> Void ) {
@@ -33,10 +32,8 @@ class RestApiManager: NSObject {
         request.httpMethod = "GET"
         
         // Extras
-        // request.addValue(apiKey!, forHTTPHeaderField: "X-PachubeApiKey")
         
         let session = URLSession.shared
-        
         
         let task = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
             print("Task done")

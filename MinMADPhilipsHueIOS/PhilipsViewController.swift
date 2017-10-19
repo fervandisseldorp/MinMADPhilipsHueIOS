@@ -9,10 +9,8 @@
 import UIKit
 
 class PhilipsViewController: UIViewController {
-    var amountLamps: Int = 10
+    @IBOutlet weak var testbutton: UIButton!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,29 +24,35 @@ class PhilipsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     func connectToPhilipsHue(){
         let connection = RestApiManager.sharedInstance
         connection.getPhilipsHueLamps( {(json: NSDictionary?, error: NSError?) -> Void in
             
+            let lampIds = json?.allKeys as! [String]
+            
             if(error == nil ){
                 print("On Completion: \(String(describing: json))")
                 
-                for i in 1...10 {
-                    print("id = \(i)")
+                // loop through found lamps
+                for lampId in lampIds {
                     
                     
+                    let lamp = json?.value(forKey: lampId) as? NSObject
+                    let lampState = lamp?.value(forKey: "state") as! NSObject
+                        let brightness = lampState.value(forKey: "bri") as! Int
+                        let hue = lampState.value(forKey: "hue") as! Int
+                        let saturation = lampState.value(forKey: "sat") as! Int
+                    
+                    print("lamp with id: " + lampId + "has values:   \(brightness) + \(hue) + \(saturation)" )
                     
                 }
-                
-                let current_value = json?.object(forKey: "current_value");
-                
-                
+            
                 // ! Important, alleen op de main thread UI update!
                 DispatchQueue.main.async(execute: {
                     
                 })
-                
-                //
                 
             } else {
                 print(error!.localizedDescription)
