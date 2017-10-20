@@ -40,7 +40,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="philipslight.png" translatesAutoresizingMaskIntoConstraints="NO" id="jfX-wV-k7S" userLabel="LampImage">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="philipshue.png" translatesAutoresizingMaskIntoConstraints="NO" id="jfX-wV-k7S" userLabel="LampImage">
                                             <frame key="frameInset" minX="42" minY="11" width="94" height="73"/>
                                             <accessibility key="accessibilityConfiguration" identifier="LampImage" label="LampImage"/>
                                             <constraints>
@@ -199,6 +199,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="philipslight.png" width="1000" height="1000"/>
+        <image name="philipshue.png" width="1000" height="1000"/>
     </resources>
 </document>

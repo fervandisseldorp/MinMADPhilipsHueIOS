@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		994D81EE1F99F3B2003CA7D0 /* philipslight.png in Resources */ = {isa = PBXBuildFile; fileRef = 994D81ED1F99F3B2003CA7D0 /* philipslight.png */; };
 		99702F391F98B28D005DAB7F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99702F381F98B28D005DAB7F /* DetailViewController.swift */; };
 		99702F3B1F98B59B005DAB7F /* LampTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99702F3A1F98B59B005DAB7F /* LampTableViewCell.swift */; };
+		99BB642B1F9A4727001206BB /* philipshue.png in Resources */ = {isa = PBXBuildFile; fileRef = 99BB642A1F9A4727001206BB /* philipshue.png */; };
 		99E12CAA1F961B2F00B7BE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E12CA91F961B2F00B7BE25 /* AppDelegate.swift */; };
 		99E12CAC1F961B2F00B7BE25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E12CAB1F961B2F00B7BE25 /* ViewController.swift */; };
 		99E12CAF1F961B2F00B7BE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99E12CAD1F961B2F00B7BE25 /* Main.storyboard */; };
@@ -21,9 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		994D81ED1F99F3B2003CA7D0 /* philipslight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = philipslight.png; path = ../../../Downloads/philipslight.png; sourceTree = "<group>"; };
 		99702F381F98B28D005DAB7F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		99702F3A1F98B59B005DAB7F /* LampTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LampTableViewCell.swift; sourceTree = "<group>"; };
+		99BB642A1F9A4727001206BB /* philipshue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = philipshue.png; sourceTree = "<group>"; };
 		99E12CA61F961B2F00B7BE25 /* MinMADPhilipsHueIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinMADPhilipsHueIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E12CA91F961B2F00B7BE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99E12CAB1F961B2F00B7BE25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		994D81EA1F99E876003CA7D0 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				994D81ED1F99F3B2003CA7D0 /* philipslight.png */,
+				99BB642A1F9A4727001206BB /* philipshue.png */,
 			);
 			name = assets;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				994D81EE1F99F3B2003CA7D0 /* philipslight.png in Resources */,
+				99BB642B1F9A4727001206BB /* philipshue.png in Resources */,
 				99E12CB41F961B2F00B7BE25 /* LaunchScreen.storyboard in Resources */,
 				99E12CB11F961B2F00B7BE25 /* Assets.xcassets in Resources */,
 				99E12CAF1F961B2F00B7BE25 /* Main.storyboard in Resources */,
