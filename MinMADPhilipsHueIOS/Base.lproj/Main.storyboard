@@ -1,72 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rwt-Li-Anm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MinMADPhilipsHueIOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIA-Mp-6AS">
-                                <frame key="frameInset" minX="151" minY="318" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="testbutton" label="testbutton"/>
-                                <state key="normal" title="testbutton"/>
-                                <connections>
-                                    <segue destination="rwt-Li-Anm" kind="show" identifier="toTableViewController" id="LNJ-Lm-Xde"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.89297678777303791" green="1" blue="0.90537064531972644" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="testButton" destination="rIA-Mp-6AS" id="ggn-fU-tXp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1338" y="81"/>
-        </scene>
         <!--Philips View Controller-->
         <scene sceneID="vKc-6y-q7S">
             <objects>
                 <tableViewController id="rwt-Li-Anm" customClass="PhilipsViewController" customModule="MinMADPhilipsHueIOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" id="t7H-6F-NHT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="t7H-6F-NHT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" id="J7s-EE-9qV" userLabel="titelLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.46272785071590938" green="0.77550411657506502" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" identifier="titelLabel" label="titelLabel"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lampCell" rowHeight="58" id="vwZ-cy-fhL" userLabel="lampCell" customClass="LampTableViewCell" customModule="MinMADPhilipsHueIOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="58"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lampCell" rowHeight="95" id="vwZ-cy-fhL" userLabel="lampCell" customClass="LampTableViewCell" customModule="MinMADPhilipsHueIOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="102" width="375" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vwZ-cy-fhL" id="KDD-22-oew">
-                                    <frame key="frameInset" width="375" height="58"/>
+                                    <frame key="frameInset" width="375" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p51-74-QTo" userLabel="LabelLampId">
-                                            <frame key="frameInset" minX="25" minY="8" width="166" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p51-74-QTo" userLabel="LabelLampId">
+                                            <frame key="frameInset" minX="227" minY="32" width="120" height="31"/>
                                             <accessibility key="accessibilityConfiguration" identifier="LabelLampId" label="LabelLampId"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="philipslight.png" translatesAutoresizingMaskIntoConstraints="NO" id="jfX-wV-k7S" userLabel="LampImage">
+                                            <frame key="frameInset" minX="42" minY="11" width="94" height="73"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="LampImage" label="LampImage"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="jfX-wV-k7S" secondAttribute="height" multiplier="47:43" id="zfQ-gg-wZO"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jfX-wV-k7S" firstAttribute="centerY" secondItem="p51-74-QTo" secondAttribute="centerY" id="1Jp-kt-zMY"/>
+                                        <constraint firstItem="jfX-wV-k7S" firstAttribute="centerY" secondItem="KDD-22-oew" secondAttribute="centerY" id="CZx-kh-OxG"/>
+                                        <constraint firstItem="jfX-wV-k7S" firstAttribute="leading" secondItem="KDD-22-oew" secondAttribute="leadingMargin" constant="34" id="EoG-hD-U4W"/>
+                                        <constraint firstItem="p51-74-QTo" firstAttribute="top" secondItem="KDD-22-oew" secondAttribute="topMargin" constant="24" id="Vsx-tn-2iW"/>
+                                        <constraint firstItem="p51-74-QTo" firstAttribute="leading" secondItem="jfX-wV-k7S" secondAttribute="trailing" constant="91" id="t0F-JA-bak"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="p51-74-QTo" secondAttribute="trailing" constant="20" id="tvU-X6-Wg3"/>
+                                        <constraint firstItem="jfX-wV-k7S" firstAttribute="top" secondItem="KDD-22-oew" secondAttribute="topMargin" constant="3" id="u14-Wh-xLr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.97829782699306134" green="0.99735056814222034" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="lampCell" label="lampCell"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.35409639293804918" green="0.42164516071330876" blue="0.52295174870466321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="LabelLampId" destination="p51-74-QTo" id="vuf-Pz-B2u"/>
+                                    <outlet property="lampImage" destination="jfX-wV-k7S" id="sM1-df-fGf"/>
                                     <segue destination="P51-Ye-knS" kind="show" identifier="toLampDetails" id="Yw4-kX-GRU"/>
                                 </connections>
                             </tableViewCell>
@@ -76,6 +80,9 @@
                             <outlet property="delegate" destination="rwt-Li-Anm" id="s4G-xP-dfI"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="titleLabel" destination="J7s-EE-9qV" id="CfD-v6-LIh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cD-Ef-tAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,69 +100,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-Nr-iBO">
-                                <frame key="frameInset" minX="54" minY="159" width="266" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-Nr-iBO">
                                 <connections>
                                     <action selector="HueSlider:" destination="P51-Ye-knS" eventType="valueChanged" id="7oD-jN-ay8"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LtV-3e-X3B">
-                                <frame key="frameInset" minX="54" minY="269" width="266" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LtV-3e-X3B">
                                 <connections>
                                     <action selector="SaturationSlider:" destination="P51-Ye-knS" eventType="valueChanged" id="1DO-NG-nzD"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd0-AT-l4P">
-                                <frame key="frameInset" minX="16" minY="20" width="88" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="backButton"/>
-                                <state key="normal" title="&lt;-Back"/>
-                                <connections>
-                                    <segue destination="rwt-Li-Anm" kind="show" id="5BN-E5-c0t"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saturation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozU-NB-L06" userLabel="SaturationLabel">
-                                <frame key="frameInset" minX="56" minY="240" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozU-NB-L06" userLabel="SaturationLabel">
                                 <accessibility key="accessibilityConfiguration" identifier="SaturationLabel" label="SaturationLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brightness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxx-Ro-xgV" userLabel="BrightnessLabel">
-                                <frame key="frameInset" minX="56" minY="343" width="82" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxx-Ro-xgV" userLabel="BrightnessLabel">
                                 <accessibility key="accessibilityConfiguration" identifier="BrightnessLabel" label="BrightnessLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-Dp-pCR" userLabel="HueLabel">
-                                <frame key="frameInset" minX="56" minY="130" width="75" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-Dp-pCR" userLabel="HueLabel">
                                 <accessibility key="accessibilityConfiguration" identifier="HueLabel"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="8OI-rh-CI5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h2q-eL-d70" userLabel="BrightnessSlider">
-                                <frame key="frameInset" minX="54" minY="393" width="266" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h2q-eL-d70" userLabel="BrightnessSlider">
                                 <connections>
                                     <action selector="BrightnessSlider:" destination="P51-Ye-knS" eventType="valueChanged" id="Bq0-5n-XQq"/>
                                 </connections>
                             </slider>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GiI-KO-jxp">
-                                <frame key="frameInset" minX="269" minY="55" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GiI-KO-jxp">
+                                <color key="onTintColor" red="0.23898717438002459" green="0.61194774249801731" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="stateSwitch:" destination="P51-Ye-knS" eventType="valueChanged" id="Zgb-xj-ysT"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd0-AT-l4P">
+                                <color key="backgroundColor" red="0.30387646046341488" green="0.73545578802102041" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="backButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="rIV-0q-BuC"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="rwt-Li-Anm" kind="show" id="5BN-E5-c0t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95355676000948675" green="0.98638161001272229" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lxx-Ro-xgV" firstAttribute="leading" secondItem="h2q-eL-d70" secondAttribute="leading" id="2nm-tS-u4w"/>
+                            <constraint firstItem="rd0-AT-l4P" firstAttribute="leading" secondItem="1Tw-q0-bJv" secondAttribute="leadingMargin" id="4Rs-0k-fnW"/>
+                            <constraint firstItem="ecE-Nr-iBO" firstAttribute="trailing" secondItem="LtV-3e-X3B" secondAttribute="trailing" id="7O8-KL-AWY"/>
+                            <constraint firstItem="ecE-Nr-iBO" firstAttribute="top" secondItem="GiI-KO-jxp" secondAttribute="bottom" constant="73" id="7XN-7T-hIW"/>
+                            <constraint firstItem="ecE-Nr-iBO" firstAttribute="centerX" secondItem="1Tw-q0-bJv" secondAttribute="centerX" id="8le-o0-YwW"/>
+                            <constraint firstItem="rd0-AT-l4P" firstAttribute="top" secondItem="khM-vP-KCQ" secondAttribute="bottom" constant="8" symbolic="YES" id="9i7-VE-KSb"/>
+                            <constraint firstItem="LtV-3e-X3B" firstAttribute="trailing" secondItem="h2q-eL-d70" secondAttribute="trailing" id="B33-C1-AJK"/>
+                            <constraint firstItem="ozU-NB-L06" firstAttribute="top" secondItem="ecE-Nr-iBO" secondAttribute="bottom" constant="51" id="FN4-wN-3dD"/>
+                            <constraint firstItem="ozU-NB-L06" firstAttribute="leading" secondItem="LtV-3e-X3B" secondAttribute="leading" id="JZn-AC-RSh"/>
+                            <constraint firstItem="GiI-KO-jxp" firstAttribute="trailing" secondItem="ecE-Nr-iBO" secondAttribute="trailing" id="MRc-Pb-vYP"/>
+                            <constraint firstItem="ecE-Nr-iBO" firstAttribute="top" secondItem="wlC-Dp-pCR" secondAttribute="bottom" constant="8" symbolic="YES" id="T8h-YC-e9b"/>
+                            <constraint firstItem="wlC-Dp-pCR" firstAttribute="leading" secondItem="1Tw-q0-bJv" secondAttribute="leadingMargin" constant="40" id="XUL-3G-TC4"/>
+                            <constraint firstItem="LtV-3e-X3B" firstAttribute="leading" secondItem="lxx-Ro-xgV" secondAttribute="leading" id="YWw-nC-N01"/>
+                            <constraint firstItem="GiI-KO-jxp" firstAttribute="top" secondItem="khM-vP-KCQ" secondAttribute="bottom" constant="35" id="dQY-dX-ewk"/>
+                            <constraint firstItem="LtV-3e-X3B" firstAttribute="top" secondItem="ozU-NB-L06" secondAttribute="bottom" constant="8" symbolic="YES" id="hvM-Ug-VB2"/>
+                            <constraint firstItem="wlC-Dp-pCR" firstAttribute="top" secondItem="rd0-AT-l4P" secondAttribute="bottom" constant="61" id="mIc-N3-LjI"/>
+                            <constraint firstItem="lxx-Ro-xgV" firstAttribute="top" secondItem="LtV-3e-X3B" secondAttribute="bottom" constant="44" id="mbF-6r-bzQ"/>
+                            <constraint firstItem="ecE-Nr-iBO" firstAttribute="leading" secondItem="ozU-NB-L06" secondAttribute="leading" id="o8L-wy-4iQ"/>
+                            <constraint firstItem="h2q-eL-d70" firstAttribute="top" secondItem="lxx-Ro-xgV" secondAttribute="bottom" constant="29" id="pon-ko-mQN"/>
+                            <constraint firstItem="wlC-Dp-pCR" firstAttribute="leading" secondItem="ecE-Nr-iBO" secondAttribute="leading" id="xRt-Ch-0bs"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="BrightnessSlider" destination="h2q-eL-d70" id="5nD-NG-Smh"/>
@@ -170,7 +198,7 @@
             <point key="canvasLocation" x="341.60000000000002" y="80.50974512743629"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="5BN-E5-c0t"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="philipslight.png" width="1000" height="1000"/>
+    </resources>
 </document>

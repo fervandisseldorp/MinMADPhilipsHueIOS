@@ -12,10 +12,15 @@ class PhilipsViewController: UITableViewController {
     @IBOutlet weak var testbutton: UIButton!
     var lampArray = [PhilipsHueLamp]()
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("view did load")
+        titleLabel.text = "Philips Hue Application"
+        titleLabel.textAlignment = NSTextAlignment.center
         connectToPhilipsHue()
         
     }

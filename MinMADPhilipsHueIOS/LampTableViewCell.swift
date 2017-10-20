@@ -12,6 +12,8 @@ import UIKit
 class LampTableViewCell: UITableViewCell {
 
     @IBOutlet weak var LabelLampId: UILabel!
+    @IBOutlet weak var lampImage: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
